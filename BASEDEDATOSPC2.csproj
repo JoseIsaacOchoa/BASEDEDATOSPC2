@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17699016-C028-4429-B559-B4F48D71C595}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BASEDEDATOSPC2</RootNamespace>
+    <AssemblyName>BASEDEDATOSPC2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLIENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLIENTES.Designer.cs">
+      <DependentUpon>CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMPRAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPRAS.Designer.cs">
+      <DependentUpon>COMPRAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMPRA_DETALLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMPRA_DETALLE.Designer.cs">
+      <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS.Designer.cs">
+      <DependentUpon>PRODUCTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROVEEDORES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PROVEEDORES.Designer.cs">
+      <DependentUpon>PROVEEDORES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNIDAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UNIDAD.Designer.cs">
+      <DependentUpon>UNIDAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS2.Designer.cs">
+      <DependentUpon>VENTAS2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTAS2_DETALLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS2_DETALLE.Designer.cs">
+      <DependentUpon>VENTAS2_DETALLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VENTASDataSet6.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CLIENTES.resx">
+      <DependentUpon>CLIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPRAS.resx">
+      <DependentUpon>COMPRAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMPRA_DETALLE.resx">
+      <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS.resx">
+      <DependentUpon>PRODUCTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PROVEEDORES.resx">
+      <DependentUpon>PROVEEDORES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNIDAD.resx">
+      <DependentUpon>UNIDAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS2.resx">
+      <DependentUpon>VENTAS2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VENTAS2_DETALLE.resx">
+      <DependentUpon>VENTAS2_DETALLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VENTASDataSet.xsc">
+      <DependentUpon>VENTASDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet.xss">
+      <DependentUpon>VENTASDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet1.xsc">
+      <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet1.xss">
+      <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet2.xsc">
+      <DependentUpon>VENTASDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet2.xss">
+      <DependentUpon>VENTASDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet3.xsc">
+      <DependentUpon>VENTASDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet3.xss">
+      <DependentUpon>VENTASDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet4.xsc">
+      <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet4.xss">
+      <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet5.xsc">
+      <DependentUpon>VENTASDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet5.xss">
+      <DependentUpon>VENTASDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet6.xsc">
+      <DependentUpon>VENTASDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="VENTASDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VENTASDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VENTASDataSet6.xss">
+      <DependentUpon>VENTASDataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
