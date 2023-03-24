@@ -425,6 +425,7 @@ namespace BASEDEDATOSPC2
             this.TXTID.Name = "TXTID";
             this.TXTID.Size = new System.Drawing.Size(61, 20);
             this.TXTID.TabIndex = 40;
+            this.TXTID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTID_KeyDown);
             this.TXTID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTID_KeyPress);
             // 
             // BTNELIMINAR

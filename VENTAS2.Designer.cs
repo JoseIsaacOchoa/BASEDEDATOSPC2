@@ -50,8 +50,8 @@ namespace BASEDEDATOSPC2
             this.BTNBUSCARIDCLIENTE = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BTNMAS = new System.Windows.Forms.Button();
+            this.BTNMENOS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@ namespace BASEDEDATOSPC2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(704, 254);
+            this.label3.Location = new System.Drawing.Point(726, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 129;
@@ -89,7 +89,7 @@ namespace BASEDEDATOSPC2
             // 
             // TXTIDALMACEN
             // 
-            this.TXTIDALMACEN.Location = new System.Drawing.Point(707, 273);
+            this.TXTIDALMACEN.Location = new System.Drawing.Point(729, 273);
             this.TXTIDALMACEN.Name = "TXTIDALMACEN";
             this.TXTIDALMACEN.Size = new System.Drawing.Size(121, 20);
             this.TXTIDALMACEN.TabIndex = 128;
@@ -99,7 +99,7 @@ namespace BASEDEDATOSPC2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(555, 254);
+            this.label2.Location = new System.Drawing.Point(577, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 127;
@@ -107,7 +107,7 @@ namespace BASEDEDATOSPC2
             // 
             // TXTIDCLIENTE
             // 
-            this.TXTIDCLIENTE.Location = new System.Drawing.Point(558, 273);
+            this.TXTIDCLIENTE.Location = new System.Drawing.Point(580, 273);
             this.TXTIDCLIENTE.Name = "TXTIDCLIENTE";
             this.TXTIDCLIENTE.Size = new System.Drawing.Size(87, 20);
             this.TXTIDCLIENTE.TabIndex = 126;
@@ -117,7 +117,7 @@ namespace BASEDEDATOSPC2
             // 
             this.IDPRO.AutoSize = true;
             this.IDPRO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDPRO.Location = new System.Drawing.Point(424, 254);
+            this.IDPRO.Location = new System.Drawing.Point(446, 254);
             this.IDPRO.Name = "IDPRO";
             this.IDPRO.Size = new System.Drawing.Size(63, 16);
             this.IDPRO.TabIndex = 125;
@@ -125,7 +125,7 @@ namespace BASEDEDATOSPC2
             // 
             // TXTMONTO
             // 
-            this.TXTMONTO.Location = new System.Drawing.Point(427, 273);
+            this.TXTMONTO.Location = new System.Drawing.Point(449, 273);
             this.TXTMONTO.Name = "TXTMONTO";
             this.TXTMONTO.Size = new System.Drawing.Size(121, 20);
             this.TXTMONTO.TabIndex = 124;
@@ -164,6 +164,7 @@ namespace BASEDEDATOSPC2
             this.TXTFOLIO.Name = "TXTFOLIO";
             this.TXTFOLIO.Size = new System.Drawing.Size(57, 20);
             this.TXTFOLIO.TabIndex = 120;
+            this.TXTFOLIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTFOLIO_KeyPress);
             // 
             // label13
             // 
@@ -224,7 +225,7 @@ namespace BASEDEDATOSPC2
             // BTNBUSCARIDCLIENTE
             // 
             this.BTNBUSCARIDCLIENTE.Image = global::BASEDEDATOSPC2.Properties.Resources.icons8_búsqueda_24;
-            this.BTNBUSCARIDCLIENTE.Location = new System.Drawing.Point(651, 254);
+            this.BTNBUSCARIDCLIENTE.Location = new System.Drawing.Point(673, 254);
             this.BTNBUSCARIDCLIENTE.Name = "BTNBUSCARIDCLIENTE";
             this.BTNBUSCARIDCLIENTE.Size = new System.Drawing.Size(39, 43);
             this.BTNBUSCARIDCLIENTE.TabIndex = 139;
@@ -248,25 +249,25 @@ namespace BASEDEDATOSPC2
             this.label4.TabIndex = 141;
             this.label4.Text = "PRODUCTOS";
             // 
-            // button1
+            // BTNMAS
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Image = global::BASEDEDATOSPC2.Properties.Resources.icons8_más_26;
-            this.button1.Location = new System.Drawing.Point(164, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 33);
-            this.button1.TabIndex = 142;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BTNMAS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BTNMAS.Image = global::BASEDEDATOSPC2.Properties.Resources.icons8_más_26;
+            this.BTNMAS.Location = new System.Drawing.Point(164, 373);
+            this.BTNMAS.Name = "BTNMAS";
+            this.BTNMAS.Size = new System.Drawing.Size(49, 33);
+            this.BTNMAS.TabIndex = 142;
+            this.BTNMAS.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BTNMENOS
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.Image = global::BASEDEDATOSPC2.Properties.Resources.icons8_menos_24;
-            this.button2.Location = new System.Drawing.Point(219, 373);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 33);
-            this.button2.TabIndex = 143;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BTNMENOS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BTNMENOS.Image = global::BASEDEDATOSPC2.Properties.Resources.icons8_menos_24;
+            this.BTNMENOS.Location = new System.Drawing.Point(219, 373);
+            this.BTNMENOS.Name = "BTNMENOS";
+            this.BTNMENOS.Size = new System.Drawing.Size(49, 33);
+            this.BTNMENOS.TabIndex = 143;
+            this.BTNMENOS.UseVisualStyleBackColor = false;
             // 
             // VENTAS2
             // 
@@ -274,8 +275,8 @@ namespace BASEDEDATOSPC2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(849, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTNMENOS);
+            this.Controls.Add(this.BTNMAS);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BTNBUSCARIDCLIENTE);
@@ -327,7 +328,7 @@ namespace BASEDEDATOSPC2
         private System.Windows.Forms.Button BTNBUSCARIDCLIENTE;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BTNMAS;
+        private System.Windows.Forms.Button BTNMENOS;
     }
 }

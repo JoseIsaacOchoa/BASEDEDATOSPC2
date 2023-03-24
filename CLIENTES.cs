@@ -98,5 +98,10 @@ namespace BASEDEDATOSPC2
                 return;
             }
         }
+
+        private void TXTID_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
