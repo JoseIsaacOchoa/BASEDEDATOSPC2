@@ -65,6 +65,11 @@
     <Compile Include="COMPRA_DETALLE.Designer.cs">
       <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +180,17 @@
     <EmbeddedResource Include="VENTAS2_DETALLE.resx">
       <DependentUpon>VENTAS2_DETALLE.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsCliente.xsc">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dsCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCliente.xss">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

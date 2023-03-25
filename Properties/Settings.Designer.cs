@@ -33,5 +33,16 @@ namespace BASEDEDATOSPC2.Properties {
                 return ((string)(this["VENTASConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-54N9T88\\SQLEXPRESS;Initial Catalog=VENTAS;Integrated Security" +
+            "=True")]
+        public string VENTASConnectionString1 {
+            get {
+                return ((string)(this["VENTASConnectionString1"]));
+            }
+        }
     }
 }
