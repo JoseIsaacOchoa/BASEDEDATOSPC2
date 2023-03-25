@@ -277,5 +277,10 @@ namespace BASEDEDATOSPC2
         {
             buscar();
         }
+
+        private void TXTID_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
