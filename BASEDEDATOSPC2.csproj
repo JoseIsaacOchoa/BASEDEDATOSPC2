@@ -70,11 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCliente.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ALMACENES.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ALMACENES.Designer.cs">
+      <DependentUpon>ALMACENES.cs</DependentUpon>
     </Compile>
     <Compile Include="PRODUCTOS.cs">
       <SubType>Form</SubType>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="COMPRA_DETALLE.resx">
       <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ALMACENES.resx">
+      <DependentUpon>ALMACENES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRODUCTOS.resx">
       <DependentUpon>PRODUCTOS.cs</DependentUpon>
