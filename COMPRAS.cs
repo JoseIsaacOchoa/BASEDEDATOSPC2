@@ -39,6 +39,7 @@ namespace BASEDEDATOSPC2
             cmd.CommandText = "SP_COMPRAS";
             cmd.Parameters.AddWithValue("@OP", 1);
             cmd.Parameters.AddWithValue("@CO_FOLIO", TXTFOLIO.Text);
+            cmd.Parameters.AddWithValue("@CO_FACTURA", TXTFACTURA.Text);
             SqlDataReader R;
 
             try
@@ -122,6 +123,7 @@ namespace BASEDEDATOSPC2
             cmd.CommandText = "SP_COMPRAS";
             cmd.Parameters.AddWithValue("@Op", 3);
             cmd.Parameters.AddWithValue("@CO_FOLIO", TXTFOLIO.Text);
+            cmd.Parameters.AddWithValue("@CO_FACTURA", TXTFACTURA.Text);
 
             try
             {

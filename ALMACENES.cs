@@ -21,9 +21,9 @@ namespace BASEDEDATOSPC2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet.ALMACENES' Puede moverla o quitarla según sea necesario.
-            this.aLMACENESTableAdapter.Fill(this.vENTASDataSet.ALMACENES);
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet.ALMACENES' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'dsAlmacen.ALMACENES' Puede moverla o quitarla según sea necesario.
+            this.aLMACENESTableAdapter1.Fill(this.dsAlmacen.ALMACENES);
+            
             consecutivo();
         }
 
@@ -68,7 +68,7 @@ namespace BASEDEDATOSPC2
             SqlConnection con = new SqlConnection(CONEXION.conectar());
             SqlCommand cmd = new SqlCommand("", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_ALMACEN";
+            cmd.CommandText = "SP_ALMACENES";
             cmd.Parameters.AddWithValue("@OP", 1);
             cmd.Parameters.AddWithValue("@AL_ID", TXTNID.Text);
             SqlDataReader R;
@@ -92,7 +92,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.aLMACENESTableAdapter.Fill(this.vENTASDataSet.ALMACENES);
+                this.aLMACENESTableAdapter1.Fill(this.dsAlmacen.ALMACENES);
             }
         }
 
@@ -118,7 +118,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.aLMACENESTableAdapter.Fill(this.vENTASDataSet.ALMACENES);
+                this.aLMACENESTableAdapter1.Fill(this.dsAlmacen.ALMACENES);
                 limpiar();
             }
         }
@@ -131,7 +131,7 @@ namespace BASEDEDATOSPC2
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_ALMACENES";
             cmd.Parameters.AddWithValue("@OP", 3);
-            cmd.Parameters.AddWithValue("@CL_ID", TXTNID.Text);
+            cmd.Parameters.AddWithValue("@AL_ID", TXTNID.Text);
 
             try
             {
@@ -146,7 +146,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.aLMACENESTableAdapter.Fill(this.vENTASDataSet.ALMACENES);
+                this.aLMACENESTableAdapter1.Fill(this.dsAlmacen.ALMACENES);
                 limpiar();
             }
         }

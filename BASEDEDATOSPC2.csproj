@@ -65,6 +65,11 @@
     <Compile Include="COMPRA_DETALLE.Designer.cs">
       <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsAlmacen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAlmacen.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,6 +209,17 @@
     <EmbeddedResource Include="VENTAS2_DETALLE.resx">
       <DependentUpon>VENTAS2_DETALLE.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsAlmacen.xsc">
+      <DependentUpon>dsAlmacen.xsd</DependentUpon>
+    </None>
+    <None Include="dsAlmacen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAlmacen.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAlmacen.xss">
+      <DependentUpon>dsAlmacen.xsd</DependentUpon>
+    </None>
     <None Include="dsCliente.xsc">
       <DependentUpon>dsCliente.xsd</DependentUpon>
     </None>
