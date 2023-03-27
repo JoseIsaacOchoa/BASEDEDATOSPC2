@@ -92,10 +92,10 @@ namespace BASEDEDATOSPC2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("AR JULIAN", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(59, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 32);
+            this.label1.Size = new System.Drawing.Size(190, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "ALMACENES";
             // 
@@ -106,20 +106,20 @@ namespace BASEDEDATOSPC2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("AR JULIAN", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(30, 335);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 16);
+            this.label2.Size = new System.Drawing.Size(22, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "ID";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("AR JULIAN", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(131, 335);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "NOMBRE";
             // 
@@ -142,7 +142,7 @@ namespace BASEDEDATOSPC2
             // BTNELIMINAR
             // 
             this.BTNELIMINAR.BackColor = System.Drawing.Color.Red;
-            this.BTNELIMINAR.Font = new System.Drawing.Font("AR JULIAN", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNELIMINAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNELIMINAR.ForeColor = System.Drawing.Color.Black;
             this.BTNELIMINAR.Location = new System.Drawing.Point(194, 260);
             this.BTNELIMINAR.Name = "BTNELIMINAR";
@@ -150,11 +150,12 @@ namespace BASEDEDATOSPC2
             this.BTNELIMINAR.TabIndex = 137;
             this.BTNELIMINAR.Text = "Eliminar";
             this.BTNELIMINAR.UseVisualStyleBackColor = false;
+            this.BTNELIMINAR.Click += new System.EventHandler(this.BTNELIMINAR_Click);
             // 
             // BTNGUARDAR
             // 
             this.BTNGUARDAR.BackColor = System.Drawing.Color.LightGreen;
-            this.BTNGUARDAR.Font = new System.Drawing.Font("AR JULIAN", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNGUARDAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNGUARDAR.ForeColor = System.Drawing.Color.Black;
             this.BTNGUARDAR.Location = new System.Drawing.Point(100, 260);
             this.BTNGUARDAR.Name = "BTNGUARDAR";
@@ -162,11 +163,12 @@ namespace BASEDEDATOSPC2
             this.BTNGUARDAR.TabIndex = 136;
             this.BTNGUARDAR.Text = "Guardar";
             this.BTNGUARDAR.UseVisualStyleBackColor = false;
+            this.BTNGUARDAR.Click += new System.EventHandler(this.BTNGUARDAR_Click);
             // 
             // BTNBUSCAR
             // 
             this.BTNBUSCAR.BackColor = System.Drawing.Color.Gold;
-            this.BTNBUSCAR.Font = new System.Drawing.Font("AR JULIAN", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNBUSCAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNBUSCAR.ForeColor = System.Drawing.Color.Black;
             this.BTNBUSCAR.Location = new System.Drawing.Point(6, 260);
             this.BTNBUSCAR.Name = "BTNBUSCAR";
@@ -174,6 +176,7 @@ namespace BASEDEDATOSPC2
             this.BTNBUSCAR.TabIndex = 135;
             this.BTNBUSCAR.Text = "Buscar";
             this.BTNBUSCAR.UseVisualStyleBackColor = false;
+            this.BTNBUSCAR.Click += new System.EventHandler(this.BTNBUSCAR_Click);
             // 
             // ALMACENES
             // 
