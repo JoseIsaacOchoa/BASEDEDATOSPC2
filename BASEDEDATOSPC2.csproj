@@ -143,12 +143,6 @@
     <Compile Include="VENTAS2.Designer.cs">
       <DependentUpon>VENTAS2.cs</DependentUpon>
     </Compile>
-    <Compile Include="VENTAS2_DETALLE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VENTAS2_DETALLE.Designer.cs">
-      <DependentUpon>VENTAS2_DETALLE.cs</DependentUpon>
-    </Compile>
     <Compile Include="VENTASDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -220,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VENTAS2.resx">
       <DependentUpon>VENTAS2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VENTAS2_DETALLE.resx">
-      <DependentUpon>VENTAS2_DETALLE.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dsAlmacen.xsc">
       <DependentUpon>dsAlmacen.xsd</DependentUpon>

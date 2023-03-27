@@ -174,7 +174,7 @@ namespace BASEDEDATOSPC2
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudieron guardar los datos, error: " + ex);
+                MessageBox.Show("No se pudieron eliminar los datos, error: " + ex);
             }
             finally
             {

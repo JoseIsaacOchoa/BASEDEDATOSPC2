@@ -161,15 +161,49 @@ namespace BASEDEDATOSPC2
                 limpiar();
             }
         }
-            private void PRODUCTOS_Load(object sender, EventArgs e)
+
+        private void existencia()
+        {
+            SqlConnection con = new SqlConnection(CONEXION.conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+            cmd.Parameters.Clear();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_PRODUCTOS";
+            cmd.Parameters.AddWithValue("@OP", 4);
+            cmd.Parameters.AddWithValue("@PR_ID", TXTID.Text);
+            SqlDataReader R;
+
+            try
             {
+                int exist = 0;
+                con.Open();
+                R = cmd.ExecuteReader();
+                if (R.Read())
+                {
+                    exist = Convert.ToInt32(R["EXISTENCIA"]);
+                }
+                MessageBox.Show("Cantidad en existencia: " + exist);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se encontraron los datos, error: " + ex);
+            }
+            finally
+            {
+                con.Close();
+                this.pRODUCTOSTableAdapter1.Fill(this.dsProductos.PRODUCTOS);
+            }
+        }
+        private void PRODUCTOS_Load(object sender, EventArgs e)
+        {
             // TODO: esta línea de código carga datos en la tabla 'dsProductos.PRODUCTOS' Puede moverla o quitarla según sea necesario.
             this.pRODUCTOSTableAdapter1.Fill(this.dsProductos.PRODUCTOS);
 
 
-            }
+        }
 
-            private void TXTID_KeyPress(object sender, KeyPressEventArgs e)
+        private void TXTID_KeyPress(object sender, KeyPressEventArgs e)
             {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
@@ -262,6 +296,11 @@ namespace BASEDEDATOSPC2
         private void BTNELIMINAR_Click(object sender, EventArgs e)
         {
             eliminar();
+        }
+
+        private void BTNEXISTENCIA_Click(object sender, EventArgs e)
+        {
+            existencia();
         }
     }
 }

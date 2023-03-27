@@ -43,6 +43,8 @@ namespace BASEDEDATOSPC2
             this.pRIDTPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRPRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dsProductos = new BASEDEDATOSPC2.dsProductos();
             this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vENTASDataSet6 = new BASEDEDATOSPC2.VENTASDataSet6();
             this.pRODUCTOSTableAdapter = new BASEDEDATOSPC2.VENTASDataSet6TableAdapters.PRODUCTOSTableAdapter();
@@ -62,14 +64,13 @@ namespace BASEDEDATOSPC2
             this.TXTIDTP = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TXTPRECIO = new System.Windows.Forms.TextBox();
-            this.dsProductos = new BASEDEDATOSPC2.dsProductos();
-            this.pRODUCTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUCTOSTableAdapter1 = new BASEDEDATOSPC2.dsProductosTableAdapters.PRODUCTOSTableAdapter();
+            this.BTNEXISTENCIA = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNELIMINAR
@@ -220,6 +221,16 @@ namespace BASEDEDATOSPC2
             this.pRIVADataGridViewTextBoxColumn.Name = "pRIVADataGridViewTextBoxColumn";
             this.pRIVADataGridViewTextBoxColumn.ReadOnly = true;
             this.pRIVADataGridViewTextBoxColumn.Width = 150;
+            // 
+            // pRODUCTOSBindingSource1
+            // 
+            this.pRODUCTOSBindingSource1.DataMember = "PRODUCTOS";
+            this.pRODUCTOSBindingSource1.DataSource = this.dsProductos;
+            // 
+            // dsProductos
+            // 
+            this.dsProductos.DataSetName = "dsProductos";
+            this.dsProductos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pRODUCTOSBindingSource
             // 
@@ -395,19 +406,19 @@ namespace BASEDEDATOSPC2
             this.TXTPRECIO.TabIndex = 114;
             this.TXTPRECIO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTPRECIO_KeyPress);
             // 
-            // dsProductos
-            // 
-            this.dsProductos.DataSetName = "dsProductos";
-            this.dsProductos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pRODUCTOSBindingSource1
-            // 
-            this.pRODUCTOSBindingSource1.DataMember = "PRODUCTOS";
-            this.pRODUCTOSBindingSource1.DataSource = this.dsProductos;
-            // 
             // pRODUCTOSTableAdapter1
             // 
             this.pRODUCTOSTableAdapter1.ClearBeforeFill = true;
+            // 
+            // BTNEXISTENCIA
+            // 
+            this.BTNEXISTENCIA.Image = global::BASEDEDATOSPC2.Properties.Resources.icons8_búsqueda_24;
+            this.BTNEXISTENCIA.Location = new System.Drawing.Point(309, 499);
+            this.BTNEXISTENCIA.Name = "BTNEXISTENCIA";
+            this.BTNEXISTENCIA.Size = new System.Drawing.Size(43, 47);
+            this.BTNEXISTENCIA.TabIndex = 121;
+            this.BTNEXISTENCIA.UseVisualStyleBackColor = true;
+            this.BTNEXISTENCIA.Click += new System.EventHandler(this.BTNEXISTENCIA_Click);
             // 
             // PRODUCTOS
             // 
@@ -415,6 +426,7 @@ namespace BASEDEDATOSPC2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1380, 692);
+            this.Controls.Add(this.BTNEXISTENCIA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TXTIVA);
             this.Controls.Add(this.label4);
@@ -442,10 +454,10 @@ namespace BASEDEDATOSPC2
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PRODUCTOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +500,6 @@ namespace BASEDEDATOSPC2
         private dsProductos dsProductos;
         private System.Windows.Forms.BindingSource pRODUCTOSBindingSource1;
         private dsProductosTableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter1;
+        private System.Windows.Forms.Button BTNEXISTENCIA;
     }
 }
