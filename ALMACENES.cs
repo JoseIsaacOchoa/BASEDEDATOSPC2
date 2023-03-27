@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using BASEDEDATOSPC2.CLASES;
 
@@ -36,7 +35,7 @@ namespace BASEDEDATOSPC2
             SqlDataReader dr;
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ISNULL(MAX(CL_ID),0) + 1 AS CONSECUTIVO FROM CLIENTES";
+            cmd.CommandText = "SELECT ISNULL(MAX(AL_ID),0) + 1 FROM ALMACENES";
 
             try
             {
@@ -72,7 +71,7 @@ namespace BASEDEDATOSPC2
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_ALMACEN";
             cmd.Parameters.AddWithValue("@OP", 1);
-            cmd.Parameters.AddWithValue("@CL_ID", TXTNID.Text);
+            cmd.Parameters.AddWithValue("@AL_ID", TXTNID.Text);
             SqlDataReader R;
 
             try

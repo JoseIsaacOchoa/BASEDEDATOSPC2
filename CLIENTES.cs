@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using BASEDEDATOSPC2.CLASES;
 
@@ -27,7 +26,6 @@ namespace BASEDEDATOSPC2
             // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet1.CLIENTES' Puede moverla o quitarla según sea necesario.
             //this.cLIENTESTableAdapter.Fill(this.vENTASDataSet1.CLIENTES);
             consecutivo();
-
         }
 
         private void consecutivo()
@@ -185,7 +183,6 @@ namespace BASEDEDATOSPC2
                 this.cLIENTESTableAdapter1.Fill(this.dsCliente.CLIENTES);
                 limpiar();
             }
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
