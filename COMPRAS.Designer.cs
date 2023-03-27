@@ -143,6 +143,7 @@ namespace BASEDEDATOSPC2
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(1918, 291);
             this.dataGridView1.TabIndex = 45;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // cOFOLIODataGridViewTextBoxColumn
             // 

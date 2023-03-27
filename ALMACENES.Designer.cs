@@ -33,6 +33,8 @@ namespace BASEDEDATOSPC2
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.aLIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aLNOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aLMACENESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dsAlmacen = new BASEDEDATOSPC2.dsAlmacen();
             this.aLMACENESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vENTASDataSet = new BASEDEDATOSPC2.VENTASDataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,14 +46,12 @@ namespace BASEDEDATOSPC2
             this.BTNELIMINAR = new System.Windows.Forms.Button();
             this.BTNGUARDAR = new System.Windows.Forms.Button();
             this.BTNBUSCAR = new System.Windows.Forms.Button();
-            this.dsAlmacen = new BASEDEDATOSPC2.dsAlmacen();
-            this.aLMACENESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aLMACENESTableAdapter1 = new BASEDEDATOSPC2.dsAlmacenTableAdapters.ALMACENESTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsAlmacen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -69,7 +69,7 @@ namespace BASEDEDATOSPC2
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(381, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(504, 291);
             this.dataGridView1.TabIndex = 0;
             // 
             // aLIDDataGridViewTextBoxColumn
@@ -89,6 +89,16 @@ namespace BASEDEDATOSPC2
             this.aLNOMBREDataGridViewTextBoxColumn.Name = "aLNOMBREDataGridViewTextBoxColumn";
             this.aLNOMBREDataGridViewTextBoxColumn.ReadOnly = true;
             this.aLNOMBREDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // aLMACENESBindingSource1
+            // 
+            this.aLMACENESBindingSource1.DataMember = "ALMACENES";
+            this.aLMACENESBindingSource1.DataSource = this.dsAlmacen;
+            // 
+            // dsAlmacen
+            // 
+            this.dsAlmacen.DataSetName = "dsAlmacen";
+            this.dsAlmacen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aLMACENESBindingSource
             // 
@@ -119,7 +129,7 @@ namespace BASEDEDATOSPC2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 515);
+            this.label2.Location = new System.Drawing.Point(111, 515);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 25);
@@ -130,7 +140,7 @@ namespace BASEDEDATOSPC2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(196, 515);
+            this.label4.Location = new System.Drawing.Point(262, 515);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 25);
@@ -139,7 +149,7 @@ namespace BASEDEDATOSPC2
             // 
             // TXTNOMBRE
             // 
-            this.TXTNOMBRE.Location = new System.Drawing.Point(201, 545);
+            this.TXTNOMBRE.Location = new System.Drawing.Point(267, 545);
             this.TXTNOMBRE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TXTNOMBRE.Name = "TXTNOMBRE";
             this.TXTNOMBRE.Size = new System.Drawing.Size(186, 26);
@@ -148,7 +158,7 @@ namespace BASEDEDATOSPC2
             // 
             // TXTNID
             // 
-            this.TXTNID.Location = new System.Drawing.Point(50, 545);
+            this.TXTNID.Location = new System.Drawing.Point(116, 545);
             this.TXTNID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TXTNID.Name = "TXTNID";
             this.TXTNID.Size = new System.Drawing.Size(90, 26);
@@ -160,7 +170,7 @@ namespace BASEDEDATOSPC2
             this.BTNELIMINAR.BackColor = System.Drawing.Color.Red;
             this.BTNELIMINAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNELIMINAR.ForeColor = System.Drawing.Color.Black;
-            this.BTNELIMINAR.Location = new System.Drawing.Point(291, 400);
+            this.BTNELIMINAR.Location = new System.Drawing.Point(357, 400);
             this.BTNELIMINAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNELIMINAR.Name = "BTNELIMINAR";
             this.BTNELIMINAR.Size = new System.Drawing.Size(132, 75);
@@ -174,7 +184,7 @@ namespace BASEDEDATOSPC2
             this.BTNGUARDAR.BackColor = System.Drawing.Color.LightGreen;
             this.BTNGUARDAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNGUARDAR.ForeColor = System.Drawing.Color.Black;
-            this.BTNGUARDAR.Location = new System.Drawing.Point(150, 400);
+            this.BTNGUARDAR.Location = new System.Drawing.Point(216, 400);
             this.BTNGUARDAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNGUARDAR.Name = "BTNGUARDAR";
             this.BTNGUARDAR.Size = new System.Drawing.Size(132, 75);
@@ -188,7 +198,7 @@ namespace BASEDEDATOSPC2
             this.BTNBUSCAR.BackColor = System.Drawing.Color.Gold;
             this.BTNBUSCAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNBUSCAR.ForeColor = System.Drawing.Color.Black;
-            this.BTNBUSCAR.Location = new System.Drawing.Point(9, 400);
+            this.BTNBUSCAR.Location = new System.Drawing.Point(75, 400);
             this.BTNBUSCAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BTNBUSCAR.Name = "BTNBUSCAR";
             this.BTNBUSCAR.Size = new System.Drawing.Size(132, 75);
@@ -196,16 +206,6 @@ namespace BASEDEDATOSPC2
             this.BTNBUSCAR.Text = "Buscar";
             this.BTNBUSCAR.UseVisualStyleBackColor = false;
             this.BTNBUSCAR.Click += new System.EventHandler(this.BTNBUSCAR_Click);
-            // 
-            // dsAlmacen
-            // 
-            this.dsAlmacen.DataSetName = "dsAlmacen";
-            this.dsAlmacen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aLMACENESBindingSource1
-            // 
-            this.aLMACENESBindingSource1.DataMember = "ALMACENES";
-            this.aLMACENESBindingSource1.DataSource = this.dsAlmacen;
             // 
             // aLMACENESTableAdapter1
             // 
@@ -216,7 +216,7 @@ namespace BASEDEDATOSPC2
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(456, 692);
+            this.ClientSize = new System.Drawing.Size(681, 692);
             this.Controls.Add(this.BTNELIMINAR);
             this.Controls.Add(this.BTNGUARDAR);
             this.Controls.Add(this.BTNBUSCAR);
@@ -231,10 +231,10 @@ namespace BASEDEDATOSPC2
             this.Text = "ALMACENES";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsAlmacen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aLMACENESBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

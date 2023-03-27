@@ -21,10 +21,10 @@ namespace BASEDEDATOSPC2
 
         private void PROVEEDORES_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet2.PROVEEDORES' Puede moverla o quitarla según sea necesario.
-            this.pROVEEDORESTableAdapter.Fill(this.vENTASDataSet2.PROVEEDORES);
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet2.PROVEEDORES' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'dsPROVEEDORES.PROVEEDORES' Puede moverla o quitarla según sea necesario.
+            this.pROVEEDORESTableAdapter1.Fill(this.dsPROVEEDORES.PROVEEDORES);
             consecutivo();
+            llenarregimen();
         }
 
         private void consecutivo()
@@ -44,8 +44,6 @@ namespace BASEDEDATOSPC2
                 if (dr.Read())
                 {
                     TXTID.Text = dr.GetInt32(0).ToString();
-                    //txtID.Text = dr[0].ToString();
-                    //txtID.Text = dr["CONSECUTIVO"].ToString();
                 }
             }
             catch (Exception ex)
@@ -71,7 +69,7 @@ namespace BASEDEDATOSPC2
             TXTCUENTABANCARIA.Clear();
             TXTNOMBRECONTCTO.Clear();
             TXTTELCONTACTO.Clear();
-            TXTREGIMEN.Clear();
+            CBREGIMEN.SelectedIndex = 1;
             consecutivo();
         }
 
@@ -91,18 +89,18 @@ namespace BASEDEDATOSPC2
                 R = cmd.ExecuteReader();
                 if (R.Read())
                 {
-                    TXTID.Text = R["CL_ID"].ToString();
-                    TXTNOMBRE.Text = R["CL_NOMBRE"].ToString();
-                    TXTRFC.Text = R["CL_RFC"].ToString();
-                    TXTCORREO.Text = R["CL_CORREO"].ToString();
-                    TXTLADA.Text = R["CL_LADA"].ToString();
-                    TXTTELEFONO.Text = R["CL_TELEFONO"].ToString();
-                    TXTCALLE.Text = R["CL_CALLE"].ToString();
-                    TXTNUMEXT.Text = R["CL_NUMERO_EXT"].ToString();
-                    TXTCUENTABANCARIA.Text = R["CL_CTABANCARIA"].ToString();
-                    TXTNOMBRECONTCTO.Text = R["CL_CONTACTO"].ToString();
-                    TXTTELCONTACTO.Text = R["CL_TELEF_CONTACTO"].ToString();
-                    TXTREGIMEN.Text = R["CL_REGIMEN"].ToString();
+                    TXTID.Text = R["PRO_ID"].ToString();
+                    TXTNOMBRE.Text = R["PRO_NOMBRE"].ToString();
+                    TXTRFC.Text = R["PRO_RFC"].ToString();
+                    TXTCORREO.Text = R["PRO_CORREO"].ToString();
+                    TXTLADA.Text = R["PRO_LADA"].ToString();
+                    TXTTELEFONO.Text = R["PRO_TELEFONO"].ToString();
+                    TXTCALLE.Text = R["PRO_CALLE"].ToString();
+                    TXTNUMEXT.Text = R["PRO_NUMERO_EXT"].ToString();
+                    TXTCUENTABANCARIA.Text = R["PRO_CTABANCARIA"].ToString();
+                    TXTNOMBRECONTCTO.Text = R["PRO_CONTACTO"].ToString();
+                    TXTTELCONTACTO.Text = R["PRO_TELEF_CONTACTO"].ToString();
+                    CBREGIMEN.SelectedValue = R["PRO_REGIMEN"].ToString();
                 }
                 MessageBox.Show("Datos encontrados");
 
@@ -114,7 +112,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.pROVEEDORESTableAdapter.Fill(this.vENTASDataSet2.PROVEEDORES);
+                this.pROVEEDORESTableAdapter1.Fill(this.dsPROVEEDORES.PROVEEDORES);
             }
         }
 
@@ -136,7 +134,7 @@ namespace BASEDEDATOSPC2
             cmd.Parameters.AddWithValue("@PRO_CTABANCARIA", TXTCUENTABANCARIA.Text);
             cmd.Parameters.AddWithValue("@PRO_CONTACTO", TXTTELCONTACTO.Text);
             cmd.Parameters.AddWithValue("@PRO_TELEF_CONTACTO", TXTTELCONTACTO.Text);
-            cmd.Parameters.AddWithValue("@PRO_REGIMEN", TXTREGIMEN.Text);
+            cmd.Parameters.AddWithValue("@PRO_REGIMEN", CBREGIMEN.SelectedValue);
             MessageBox.Show("Sus datos se guardaron correctamente");
             try
             {
@@ -150,7 +148,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.pROVEEDORESTableAdapter.Fill(this.vENTASDataSet2.PROVEEDORES);
+                this.pROVEEDORESTableAdapter1.Fill(this.dsPROVEEDORES.PROVEEDORES);
                 limpiar();
             }
         }
@@ -163,7 +161,7 @@ namespace BASEDEDATOSPC2
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_PROVEEDORES";
             cmd.Parameters.AddWithValue("@OP", 3);
-            cmd.Parameters.AddWithValue("@CL_ID", TXTID.Text);
+            cmd.Parameters.AddWithValue("@PRO_ID", TXTID.Text);
 
             try
             {
@@ -178,9 +176,26 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.pROVEEDORESTableAdapter.Fill(this.vENTASDataSet2.PROVEEDORES);
+                this.pROVEEDORESTableAdapter1.Fill(this.dsPROVEEDORES.PROVEEDORES);
                 limpiar();
             }
+        }
+
+        private void llenarregimen()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(CONEXION.conectar()))
+            {
+                string query = "SELECT RE_ID, RE_DESCRIPCION FROM REGIMEN";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            CBREGIMEN.DisplayMember = "RE_DESCRIPCION";
+            CBREGIMEN.ValueMember = "RE_ID";
+            CBREGIMEN.DataSource = dt;
         }
 
         private void TXTNOMBRE_KeyPress(object sender, KeyPressEventArgs e)

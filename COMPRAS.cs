@@ -118,6 +118,28 @@ namespace BASEDEDATOSPC2
         {
             SqlConnection con = new SqlConnection(CONEXION.conectar());
             SqlCommand cmd = new SqlCommand("", con);
+            SqlCommand cmd2 = new SqlCommand("", con);
+
+            cmd2.Parameters.Clear();
+            cmd2.CommandType = CommandType.StoredProcedure;
+            cmd2.CommandText = "SP_COMPRAS_DETALLES";
+            cmd2.Parameters.AddWithValue("@Op", 3);
+            cmd2.Parameters.AddWithValue("@CD_FOLIO", TXTFOLIO.Text);
+
+            try
+            {
+                con.Open();
+                cmd2.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron eliminar los datos, error: " + ex);
+            }
+            finally
+            {
+                con.Close();
+            }
+
             cmd.Parameters.Clear();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_COMPRAS";
@@ -133,13 +155,43 @@ namespace BASEDEDATOSPC2
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudieron guardar los datos, error: " + ex);
+                MessageBox.Show("No se pudieron eliminar los datos, error: " + ex);
             }
             finally
             {
                 con.Close();
                 this.cOMPRASTableAdapter.Fill(this.dsCompras.COMPRAS);
                 limpiar();
+            }
+
+        }
+
+        private void consecutivo()
+        {
+            SqlConnection con = new SqlConnection(CONEXION.conectar());
+            SqlCommand cmd = new SqlCommand("", con);
+            SqlDataReader dr;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT ISNULL(MAX(CO_FOLIO),0) + 1 AS CONSECUTIVO FROM COMPRAS";
+
+            try
+            {
+                con.Open();
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    TXTFOLIO.Text = dr.GetInt32(0).ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se encontraron datos, error: " + ex);
+            }
+            finally
+            {
+                con.Close();
             }
 
         }
@@ -239,17 +291,29 @@ namespace BASEDEDATOSPC2
             this.cOMPRASTableAdapter.Fill(this.dsCompras.COMPRAS);
             llenarproveedores();
             llenaralmacenes();
+            consecutivo();
 
         }
 
         private void BTNGUARDAR_Click(object sender, EventArgs e)
         {
             guardar();
+            COMPRA_DETALLE form = new COMPRA_DETALLE();
+            form.ShowDialog();
         }
 
         private void BTNELIMINAR_Click(object sender, EventArgs e)
         {
             eliminar();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void BTNINSERTAR_Click(object sender, EventArgs e)
+        {
         }
     }
 }

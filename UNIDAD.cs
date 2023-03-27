@@ -21,9 +21,8 @@ namespace BASEDEDATOSPC2
 
         private void UNIDAD_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet5.UNIDAD' Puede moverla o quitarla según sea necesario.
-            this.uNIDADTableAdapter.Fill(this.vENTASDataSet5.UNIDAD);
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet5.UNIDAD' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'dsUNIDAD.UNIDAD' Puede moverla o quitarla según sea necesario.
+            this.uNIDADTableAdapter1.Fill(this.dsUNIDAD.UNIDAD);
             consecutivo();
         }
 
@@ -44,8 +43,6 @@ namespace BASEDEDATOSPC2
                 if (dr.Read())
                 {
                     TXTNID.Text = dr.GetInt32(0).ToString();
-                    //txtNID.Text = dr[0].ToString();
-                    //txtNID.Text = dr["CONSECUTIVO"].ToString();
                 }
             }
             catch (Exception ex)
@@ -94,7 +91,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.uNIDADTableAdapter.Fill(this.vENTASDataSet5.UNIDAD);
+                this.uNIDADTableAdapter1.Fill(this.dsUNIDAD.UNIDAD);
             }
         }
 
@@ -105,8 +102,8 @@ namespace BASEDEDATOSPC2
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_UNIDAD";
             cmd.Parameters.AddWithValue("@OP", 2);
-            cmd.Parameters.AddWithValue("@CL_ID", TXTNID.Text);
-            cmd.Parameters.AddWithValue("@CL_NOMBRE", TXTDESCRIPCION.Text);
+            cmd.Parameters.AddWithValue("@UN_ID", TXTNID.Text);
+            cmd.Parameters.AddWithValue("@UN_DESCRIPCION", TXTDESCRIPCION.Text);
             MessageBox.Show("Sus datos se guardaron correctamente");
             try
             {
@@ -120,7 +117,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.uNIDADTableAdapter.Fill(this.vENTASDataSet5.UNIDAD);
+                this.uNIDADTableAdapter1.Fill(this.dsUNIDAD.UNIDAD);
                 limpiar();
             }
         }
@@ -148,7 +145,7 @@ namespace BASEDEDATOSPC2
             finally
             {
                 con.Close();
-                this.uNIDADTableAdapter.Fill(this.vENTASDataSet5.UNIDAD);
+                this.uNIDADTableAdapter1.Fill(this.dsUNIDAD.UNIDAD);
                 limpiar();
             }
         }

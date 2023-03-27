@@ -86,10 +86,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCompras.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsCOMPRASDETALLE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCOMPRASDETALLE.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsProductos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsPROVEEDORES.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPROVEEDORES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsUNIDAD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUNIDAD.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsVentas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -242,6 +257,17 @@
     <None Include="dsCompras.xss">
       <DependentUpon>dsCompras.xsd</DependentUpon>
     </None>
+    <None Include="dsCOMPRASDETALLE.xsc">
+      <DependentUpon>dsCOMPRASDETALLE.xsd</DependentUpon>
+    </None>
+    <None Include="dsCOMPRASDETALLE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCOMPRASDETALLE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCOMPRASDETALLE.xss">
+      <DependentUpon>dsCOMPRASDETALLE.xsd</DependentUpon>
+    </None>
     <None Include="dsProductos.xsc">
       <DependentUpon>dsProductos.xsd</DependentUpon>
     </None>
@@ -252,6 +278,28 @@
     </None>
     <None Include="dsProductos.xss">
       <DependentUpon>dsProductos.xsd</DependentUpon>
+    </None>
+    <None Include="dsPROVEEDORES.xsc">
+      <DependentUpon>dsPROVEEDORES.xsd</DependentUpon>
+    </None>
+    <None Include="dsPROVEEDORES.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPROVEEDORES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsPROVEEDORES.xss">
+      <DependentUpon>dsPROVEEDORES.xsd</DependentUpon>
+    </None>
+    <None Include="dsUNIDAD.xsc">
+      <DependentUpon>dsUNIDAD.xsd</DependentUpon>
+    </None>
+    <None Include="dsUNIDAD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUNIDAD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsUNIDAD.xss">
+      <DependentUpon>dsUNIDAD.xsd</DependentUpon>
     </None>
     <None Include="dsVentas.xsc">
       <DependentUpon>dsVentas.xsd</DependentUpon>

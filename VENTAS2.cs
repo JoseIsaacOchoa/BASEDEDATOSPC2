@@ -290,7 +290,7 @@ namespace BASEDEDATOSPC2
 
         private void BTNBUSCARFOLIO_Click(object sender, EventArgs e)
         {
-
+            buscar();
         }
 
         private void VENTAS2_Load(object sender, EventArgs e)
