@@ -16,7 +16,7 @@ namespace BASEDEDATOSPC2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CLIENTES());
+            Application.Run(new Menu());
         }
     }
 }
