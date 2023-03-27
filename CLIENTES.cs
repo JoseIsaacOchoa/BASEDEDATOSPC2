@@ -57,7 +57,6 @@ namespace BASEDEDATOSPC2
             {
                 con.Close();
             }
-
         }
 
         private void limpiar()

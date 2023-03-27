@@ -23,8 +23,7 @@ namespace BASEDEDATOSPC2
         {
             // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet2.PROVEEDORES' Puede moverla o quitarla según sea necesario.
             this.pROVEEDORESTableAdapter.Fill(this.vENTASDataSet2.PROVEEDORES);
-            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet1.CLIENTES' Puede moverla o quitarla según sea necesario.
-            //this.cLIENTESTableAdapter.Fill(this.vENTASDataSet1.CLIENTES);
+            // TODO: esta línea de código carga datos en la tabla 'vENTASDataSet2.PROVEEDORES' Puede moverla o quitarla según sea necesario.
             consecutivo();
         }
 
