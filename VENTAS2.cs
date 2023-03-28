@@ -305,6 +305,13 @@ namespace BASEDEDATOSPC2
         private void BTNMAS_Click(object sender, EventArgs e)
         {
             guardar();
+            TXTFOLIO.Enabled = false;
+            TXTSERIE.Enabled = false;
+            TXTISTIPODOCUMENTO.Enabled = false;
+            TXTMONTO.Enabled = false;
+            CBCLIENTES.Enabled = false;
+            TXTIDALMACEN.Enabled = false;
+            DATETIMEFECHA.Enabled = false;
         }
 
         private void BTNMENOS_Click(object sender, EventArgs e)
@@ -315,11 +322,25 @@ namespace BASEDEDATOSPC2
         private void BTNVENDER_Click(object sender, EventArgs e)
         {
             guardarventa();
+            TXTFOLIO.Enabled = true;
+            TXTSERIE.Enabled = true;
+            TXTISTIPODOCUMENTO.Enabled = true;
+            TXTMONTO.Enabled = true;
+            CBCLIENTES.Enabled = true;
+            TXTIDALMACEN.Enabled = true;
+            DATETIMEFECHA.Enabled = true;
         }
 
         private void BTNCANCELAR_Click(object sender, EventArgs e)
         {
             eliminarventa();
+            TXTFOLIO.Enabled = true;
+            TXTSERIE.Enabled = true;
+            TXTISTIPODOCUMENTO.Enabled = true;
+            TXTMONTO.Enabled = true;
+            CBCLIENTES.Enabled = true;
+            TXTIDALMACEN.Enabled = true;
+            DATETIMEFECHA.Enabled = true;
         }
     }
 }

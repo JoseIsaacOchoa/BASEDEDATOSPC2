@@ -59,12 +59,6 @@
     <Compile Include="COMPRAS.Designer.cs">
       <DependentUpon>COMPRAS.cs</DependentUpon>
     </Compile>
-    <Compile Include="COMPRA_DETALLE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="COMPRA_DETALLE.Designer.cs">
-      <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
-    </Compile>
     <Compile Include="dsAlmacen.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +84,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCOMPRASDETALLE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsComprasTemporal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsComprasTemporal.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsProductos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -184,9 +183,6 @@
     <EmbeddedResource Include="COMPRAS.resx">
       <DependentUpon>COMPRAS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="COMPRA_DETALLE.resx">
-      <DependentUpon>COMPRA_DETALLE.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ALMACENES.resx">
       <DependentUpon>ALMACENES.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +254,17 @@
     </None>
     <None Include="dsCOMPRASDETALLE.xss">
       <DependentUpon>dsCOMPRASDETALLE.xsd</DependentUpon>
+    </None>
+    <None Include="dsComprasTemporal.xsc">
+      <DependentUpon>dsComprasTemporal.xsd</DependentUpon>
+    </None>
+    <None Include="dsComprasTemporal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsComprasTemporal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsComprasTemporal.xss">
+      <DependentUpon>dsComprasTemporal.xsd</DependentUpon>
     </None>
     <None Include="dsProductos.xsc">
       <DependentUpon>dsProductos.xsd</DependentUpon>
